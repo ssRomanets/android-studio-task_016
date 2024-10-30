@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mediumPurple"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints"/>
+
+    <EditText
+        android:id="@+id/inputET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input"
+        android:textSize="20dp"
+        android:layout_marginLeft="15pt"
+        android:layout_marginRight="15pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <TextView
+        android:id="@+id/resultTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="result"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputET"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="20dp"
+        android:columnCount="4"
+        android:rowCount="4"
+        >
+
+        <Button
+            android:id="@+id/buttonDivBTN"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:text="/"
+            android:onClick="onButtonActionClick"
+            />
+
+        <Button
+            android:id="@+id/button1BTN"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:text="1"
+            android:onClick="onButtonDigitClick"
+            />
+        <Button
+            android:id="@+id/button2BTN"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:text="2"
+            android:onClick="onButtonDigitClick"
+            />
+        <Button
+            android:id="@+id/button3BTN"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:text="3"
+            android:onClick="onButtonDigitClick"
+            />
+        <Button
+            android:id="@+id/buttonMultBTN"
+            android:layout_column="3"
+            android:layout_row="1"
+            android:onClick="onButtonActionClick"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/button4BTN"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:text="4"
+            android:onClick="onButtonDigitClick"
+            />
+        <Button
+            android:id="@+id/button5BTN"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:text="5"
+            android:onClick="onButtonDigitClick"
+            />
+        <Button
+            android:id="@+id/button6BTN"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:text="6"
+            android:onClick="onButtonDigitClick"
+            />
+        <Button
+            android:id="@+id/buttonDifBTN"
+            android:layout_column="3"
+            android:layout_row="2"
+            android:onClick="onButtonActionClick"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button7BTN"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:text="7"
+            android:onClick="onButtonDigitClick"
+            />
+        <Button
+            android:id="@+id/button8BTN"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:text="8"
+            android:onClick="onButtonDigitClick"
+            />
+        <Button
+            android:id="@+id/button9BTN"
+            android:layout_column="2"
+            android:layout_row="3"
+            android:text="9"
+            android:onClick="onButtonDigitClick"
+            />
+
+        <Button
+            android:id="@+id/buttonSumBTN"
+            android:text="+"
+            android:layout_height="100dp"
+            android:layout_rowSpan="2"
+            android:onClick="onButtonActionClick"
+            />
+
+        <Button
+            android:id="@+id/button0BTN"
+            android:text="0"
+            android:layout_width="180dp"
+            android:layout_columnSpan="2"
+            android:onClick="onButtonDigitClick"
+            />
+        <Button
+            android:id="@+id/buttonEqBTN"
+            android:text="="
+            android:layout_width="270dp"
+            android:layout_columnSpan="3"
+            android:onClick="onButtonActionClick"
+            />
+        <Button
+            android:id="@+id/buttonResetBTN"
+            android:text="reset"
+            android:layout_width="360dp"
+            android:layout_columnSpan="4"
+            android:onClick="onButtonResetClick"
+            />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

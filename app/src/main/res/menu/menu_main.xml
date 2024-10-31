@@ -7,6 +7,7 @@
     <item
         android:id="@+id/exitMenuMain"
         android:orderInCategory="50"
-        android:title="@string/exit"
-        app:showAsAction="never"/>
+        android:title=""
+        android:icon="@drawable/baseline_arrow_forward_24"
+        app:showAsAction="always"/>
 </menu>

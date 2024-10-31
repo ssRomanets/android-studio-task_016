@@ -51,11 +51,6 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbarMain)
         title = "Калькулятор"
 
-        setSupportActionBar(toolbarMain);
-        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar()?.setHomeAsUpIndicator(R.drawable.baseline_arrow_forward_24)
-        getSupportActionBar()?.setDisplayShowHomeEnabled(true);
-
         //
         inputET  = findViewById(R.id.inputET)
         resultTV = findViewById(R.id.resultTV)
@@ -90,13 +85,9 @@ class MainActivity : AppCompatActivity() {
 
     fun onButtonActionClick(v: View) {
         inputET.text.clear()
-        when(v.id) {
-            R.id.buttonSumBTN  -> operand = "+"
-            R.id.buttonDifBTN  -> operand = "-"
-            R.id.buttonMultBTN -> operand = "*"
-            R.id.buttonDivBTN  -> operand = "/"
-            R.id.buttonEqBTN   -> operand = "="
-        }
+
+        var button: Button = findViewById(v.id)
+        operand = button.text.toString();
 
         if (operand == "=") {
             resultTV.setText(result.toString())
